@@ -27,10 +27,10 @@ console.log(colors.join(","));
 var a = [5, 1, 8, 10, 4];
 //TODO should output: [10,8,5,4,1]
 for(let i=0; i<a.length; i++){
-    for(let j=i+1; j<a.length; j++){
-        if(a[i] < a[j]){
-            let temp = a[i];
-            a[i] = a[j];
+    for(let j=1; j<a.length-i; j++){
+        if(a[j-1] < a[j]){
+            let temp = a[j-1];
+            a[j-1] = a[j];
             a[j] = temp;
         }
         
